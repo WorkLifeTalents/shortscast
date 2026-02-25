@@ -2,18 +2,35 @@
 <html>
 <head>
     <title>ShortsCast — Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body { font-family: -apple-system, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #1a1a2e; color: white; text-align: center; }
         .container { padding: 40px; }
         h1 { font-size: 48px; margin-bottom: 10px; }
         p { color: #888; font-size: 16px; }
     </style>
+    <script>
+        // Extract the auth code from the URL and redirect back to the app
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const code = params.get('code');
+            const state = params.get('state');
+            const error = params.get('error');
+
+            if (code) {
+                // Redirect to the app using custom scheme
+                window.location.href = 'shortscast://tiktok-callback?code=' + encodeURIComponent(code) + '&state=' + encodeURIComponent(state || '');
+            } else if (error) {
+                window.location.href = 'shortscast://tiktok-callback?error=' + encodeURIComponent(error);
+            }
+        };
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>🎬</h1>
         <p>Redirecting back to ShortsCast...</p>
-        <p>You can close this window.</p>
+        <p>If nothing happens, close this window and reopen the app.</p>
     </div>
 </body>
 </html>
