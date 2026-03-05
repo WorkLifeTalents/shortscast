@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShortsCast — Distribute Your Shorts Everywhere</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #ffffff; }
+        
+        .hero { text-align: center; padding: 80px 20px 60px; }
+        .hero .logo { font-size: 72px; margin-bottom: 16px; }
+        .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 12px; }
+        .hero .tagline { font-size: 20px; color: #888; margin-bottom: 40px; }
+        
+        .platforms { display: flex; justify-content: center; gap: 24px; margin-bottom: 48px; flex-wrap: wrap; }
+        .platform { background: #16213e; border-radius: 16px; padding: 24px 32px; text-align: center; min-width: 140px; }
+        .platform .icon { font-size: 36px; margin-bottom: 8px; }
+        .platform .name { font-size: 16px; font-weight: 600; }
+        .platform.active { border: 2px solid #e94560; }
+        .platform.coming { border: 2px solid #2a2a4a; opacity: 0.5; }
+        .platform .badge { font-size: 11px; color: #888; margin-top: 4px; }
+        
+        .features { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .features h2 { font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+        .feature { background: #16213e; border-radius: 12px; padding: 24px; }
+        .feature .emoji { font-size: 28px; margin-bottom: 12px; }
+        .feature h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+        .feature p { font-size: 14px; color: #888; line-height: 1.5; }
+        
+        .how-it-works { max-width: 600px; margin: 0 auto; padding: 60px 20px; }
+        .how-it-works h2 { font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center; }
+        .step { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
+        .step-num { background: #e94560; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+        .step-text h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+        .step-text p { font-size: 14px; color: #888; }
+
+        .cta { text-align: center; padding: 40px 20px 60px; }
+        .cta p { font-size: 16px; color: #888; margin-bottom: 24px; }
+        .cta a { display: inline-block; background: #e94560; color: white; padding: 16px 48px; border-radius: 12px; text-decoration: none; font-size: 18px; font-weight: 700; }
+        
+        footer { text-align: center; padding: 40px 20px; border-top: 1px solid #2a2a4a; }
+        footer .links { margin-bottom: 12px; }
+        footer a { color: #888; text-decoration: none; margin: 0 16px; font-size: 14px; }
+        footer a:hover { color: #e94560; }
+        footer .copy { color: #555; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo">🎬</div>
+        <h1>ShortsCast</h1>
+        <p class="tagline">Distribute your short-form videos everywhere — from one app.</p>
+    </div>
+
+    <div class="platforms">
+        <div class="platform active">
+            <div class="icon">▶️</div>
+            <div class="name">YouTube Shorts</div>
+            <div class="badge">Available</div>
+        </div>
+        <div class="platform active">
+            <div class="icon">🎵</div>
+            <div class="name">TikTok</div>
+            <div class="badge">Available</div>
+        </div>
+        <div class="platform coming">
+            <div class="icon">📷</div>
+            <div class="name">Instagram Reels</div>
+            <div class="badge">Coming Soon</div>
+        </div>
+    </div>
+
+    <div class="features">
+        <h2>Why ShortsCast?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="emoji">📱</div>
+                <h3>Upload from your phone</h3>
+                <p>Select videos directly from your iPhone library and upload to multiple platforms at once.</p>
+            </div>
+            <div class="feature">
+                <div class="emoji">⚡</div>
+                <h3>One tap, multiple platforms</h3>
+                <p>Add your title, description, and hashtags once — ShortsCast distributes everywhere.</p>
+            </div>
+            <div class="feature">
+                <div class="emoji">🔒</div>
+                <h3>Privacy first</h3>
+                <p>Your videos go directly from your device to the platform. No intermediate servers, no data stored.</p>
+            </div>
+            <div class="feature">
+                <div class="emoji">🎯</div>
+                <h3>Built for creators</h3>
+                <p>Designed for content creators, podcasters, and anyone sharing short-form video across platforms.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+                <h3>Connect your accounts</h3>
+                <p>Sign in with YouTube, TikTok, or Instagram — securely via OAuth.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+                <h3>Select a video</h3>
+                <p>Choose a vertical short-form video from your device library.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+                <h3>Add metadata</h3>
+                <p>Enter a title, description, hashtags, and choose your privacy settings.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-text">
+                <h3>Publish everywhere</h3>
+                <p>Tap upload and ShortsCast distributes your video to all selected platforms.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <p>ShortsCast is currently available via Expo Go for iOS.</p>
+        <a href="mailto:worklifetalents@gmail.com">Get Early Access</a>
+    </div>
+
+    <footer>
+        <div class="links">
+            <a href="./terms.html">Terms of Service</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="mailto:worklifetalents@gmail.com">Contact</a>
+        </div>
+        <div class="copy">&copy; 2026 ShortsCast. All rights reserved.</div>
+    </footer>
+</body>
+</html>
